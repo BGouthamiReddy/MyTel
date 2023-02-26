@@ -1,0 +1,34 @@
+package com.mytel.plan.service.impl;
+
+import java.util.List;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.mytel.plan.dto.PlanDTO;
+import com.mytel.plan.repository.PlanRepo;
+import com.mytel.plan.service.PlanService;
+
+@Service
+public class PlanServiceImpl implements PlanService {
+
+	
+	@Autowired
+	PlanRepo planRepo;
+	@Autowired
+	ModelMapper modelMapper;
+	
+	@Override
+	public List<PlanDTO> getAllPlans() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public PlanDTO getSpecificPlan(int planId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

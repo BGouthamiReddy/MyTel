@@ -1,0 +1,12 @@
+package com.mytel.calldeatils.service;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.PathVariable;
+
+import com.mytel.calldeatils.dto.CallDetailsDTO;
+
+public interface CallDetailsService {
+
+	public List<CallDetailsDTO> getCustomerCallDetails(@PathVariable long phoneNo);
+}

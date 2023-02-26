@@ -1,0 +1,40 @@
+package com.mytel.customer.service.impl;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.mytel.customer.dto.CustomerDTO;
+import com.mytel.customer.entity.Customer;
+import com.mytel.customer.repository.CustomerRepo;
+import com.mytel.customer.service.CustomerService;
+//import com.mytel.customer.service.LoginDTO;
+
+public class CustomerServiceImpl implements CustomerService  {
+	
+	@Autowired
+	CustomerRepo custRepo;
+	
+	@Autowired
+	ModelMapper modelMapper;
+
+	@Override
+	public void createCustomer(CustomerDTO custDTO) {
+		Customer cust = this.modelMapper.map(custDTO, Customer.class);
+		custRepo.save(cust);
+	}
+
+	@Override
+	public CustomerDTO getCustomerProfile(Long phoneNo) {
+		Customer cust = custRepo.findById(phoneNo).get();
+		CustomerDTO custDTO = this.modelMapper.map(cust, CustomerDTO.class);
+		return custDTO;
+	}
+
+	
+	/*@Override
+	  public boolean login(LoginDTO loginDTO) {
+		// TODO Auto-generated method stub
+		return false;
+	}*/
+
+}

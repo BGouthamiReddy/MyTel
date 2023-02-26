@@ -1,0 +1,8 @@
+INDEX VERSION 1.131+C:\Dev\MyTelMicroserviceApplication\Microservices\.metadata\.plugins\org.eclipse.jdt.core
+1078499252.index
+718755996.index
+1302210536.index
+254111520.index
+634049279.index
+1061795867.index
+1865797976.index

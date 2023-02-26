@@ -1,0 +1,22 @@
+package com.mytel.friendfamily.service.impl;
+
+import java.util.List;
+
+import com.mytel.friendfamily.dto.FriendFamilyDTO;
+import com.mytel.friendfamily.service.FriendFamilyService;
+
+public class FriendFamilyServiceImpl implements FriendFamilyService {
+
+	@Override
+	public void saveFriend(Long phoneNo, FriendFamilyDTO friendDTO) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public List<Long> getSpecificFriends(Long phoneNo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

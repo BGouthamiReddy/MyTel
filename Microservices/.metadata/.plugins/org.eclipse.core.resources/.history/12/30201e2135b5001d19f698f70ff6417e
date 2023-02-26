@@ -1,0 +1,13 @@
+package com.mytel.calldetails;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class MytelCalldetailsApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(MytelCalldetailsApplication.class, args);
+	}
+
+}

@@ -1,0 +1,15 @@
+package com.mytel.calldeatils.entity;
+
+
+public class CallDetails {
+
+	
+	long id;
+	
+	long calledBy;
+	
+	long calledTo;
+	
+	
+	int duration;
+}

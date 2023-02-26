@@ -1,0 +1,11 @@
+package com.mytel.calldeatils.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.mytel.calldeatils.entity.CallDetails;
+
+public interface CallDetailsRepo extends JpaRepository<CallDetails, Long>{
+	List<CallDetails> findByCalledBy(long calledBy);
+}

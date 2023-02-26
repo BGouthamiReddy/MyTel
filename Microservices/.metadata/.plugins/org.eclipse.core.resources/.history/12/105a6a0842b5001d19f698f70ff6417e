@@ -1,0 +1,5 @@
+package com.mytel.customer.repository;
+
+public interface CustomerRepo {
+
+}

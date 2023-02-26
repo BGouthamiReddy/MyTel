@@ -1,0 +1,5 @@
+package com.mytel.customer.service;
+
+public interface CustomerService {
+
+}

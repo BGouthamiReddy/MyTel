@@ -1,0 +1,34 @@
+package com.mytel.friendfamily.service.impl;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.mytel.friendfamily.dto.FriendFamilyDTO;
+import com.mytel.friendfamily.entity.FriendFamily;
+import com.mytel.friendfamily.repository.FriendFamilyRepo;
+import com.mytel.friendfamily.service.FriendFamilyService;
+
+public class FriendFamilyServiceImpl implements FriendFamilyService {
+
+	@Autowired
+	FriendFamilyRepo friendRepo;
+	@Autowired
+	ModelMapper modelMapper;
+	
+	@Override
+	public void saveFriend(Long phoneNo, FriendFamilyDTO friendDTO) {
+		friendDTO.setPhoneNo(phoneNo);
+		FriendFamily friend = this.modelMapper.map(friendDTO, FriendFamily.class);
+		friendRepo.save(friend);
+	}
+
+	@Override
+	public List<Long> getSpecificFriends(Long phoneNo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

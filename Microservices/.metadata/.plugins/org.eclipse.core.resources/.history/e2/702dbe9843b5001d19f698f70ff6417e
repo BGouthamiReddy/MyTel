@@ -1,0 +1,5 @@
+package com.mytel.customer.controller;
+
+public class CustomerController {
+
+}

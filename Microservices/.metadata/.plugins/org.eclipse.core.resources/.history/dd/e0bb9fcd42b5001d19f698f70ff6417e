@@ -1,0 +1,5 @@
+package com.mytel.customer.service.impl;
+
+public class CustomerServiceImpl {
+
+}

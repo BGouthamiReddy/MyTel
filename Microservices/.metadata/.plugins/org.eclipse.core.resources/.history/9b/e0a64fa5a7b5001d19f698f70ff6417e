@@ -1,0 +1,53 @@
+package com.mytel.customer.service.impl;
+
+import java.util.Optional;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.mytel.customer.dto.CustomerDTO;
+import com.mytel.customer.dto.LoginDTO;
+import com.mytel.customer.dto.PlanDTO;
+import com.mytel.customer.entity.Customer;
+import com.mytel.customer.repository.CustomerRepo;
+import com.mytel.customer.service.CustomerService;
+//import com.mytel.customer.service.LoginDTO;
+
+@Service
+public class CustomerServiceImpl implements CustomerService  {
+	
+	@Autowired
+	CustomerRepo custRepo;
+	
+	@Autowired
+	ModelMapper modelMapper;
+
+	@Override
+	public void createCustomer(CustomerDTO custDTO) {
+		Customer cust = this.modelMapper.map(custDTO, Customer.class);
+		PlanDTO planDTO = new PlanDTO();
+		planDTO.setPlanId(cust.getPlanId());
+		custDTO.setCurrentPlan(planDTO);
+		custDTO.setCurrentPlan(planDTO);
+		Customer savedCustomer = this.custRepo.save(cust);
+		
+	}
+
+	@Override
+	public CustomerDTO getCustomerProfile(Long phoneNo) {
+		Optional<Customer> cust = this.custRepo.findById(phoneNo);
+		CustomerDTO custDTO = this.modelMapper.map(cust, CustomerDTO.class);
+		return custDTO;
+		
+	}
+		
+	public boolean login(LoginDTO loginDTO) {
+		Customer cust = custRepo.findById(loginDTO.getPhoneNo()).get();
+		if (cust != null && cust.getPassword().equals(loginDTO.getPassword())) {
+			return true;
+		}
+		return false;
+	}
+
+}

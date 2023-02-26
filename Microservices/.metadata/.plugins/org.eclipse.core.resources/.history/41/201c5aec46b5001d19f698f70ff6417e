@@ -1,0 +1,5 @@
+package com.mytel.plan.service;
+
+public interface PlanService {
+
+}

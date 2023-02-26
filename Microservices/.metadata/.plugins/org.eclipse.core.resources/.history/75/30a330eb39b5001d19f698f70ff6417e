@@ -1,0 +1,18 @@
+package com.mytel.calldeatils.dto;
+
+import java.util.Date;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+@AllArgsConstructor
+public class CallDetailsDTO {
+	
+	long calledBy;
+	long calledTo;
+	Date calledOn;
+	int duration;
+}

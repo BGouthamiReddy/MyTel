@@ -1,0 +1,8 @@
+1677347383794	Rename type 'CalldetailsDTO'
+1677347402007	Delete element
+1677352561395	Rename package 'com.mytel.calldeatils.controller'
+1677352589001	Rename package 'com.mytel.calldeatils.dto'
+1677352609823	Rename package 'com.mytel.calldeatils.entity'
+1677352626600	Rename package 'com.mytel.calldeatils.repository'
+1677352637666	Rename package 'com.mytel.calldeatils.service'
+1677352648848	Rename package 'com.mytel.calldeatils.service.impl'

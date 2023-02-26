@@ -1,0 +1,5 @@
+package com.mytel.calldeatils.controller;
+
+public class CallDetailsController {
+
+}

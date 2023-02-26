@@ -1,0 +1,5 @@
+package com.mytel.calldeatils.service.impl;
+
+public class CallDetailsServiceImpl {
+
+}

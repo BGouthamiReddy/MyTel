@@ -1,0 +1,5 @@
+package com.mytel.friendfamily.entity;
+
+public class FriendFamily {
+
+}

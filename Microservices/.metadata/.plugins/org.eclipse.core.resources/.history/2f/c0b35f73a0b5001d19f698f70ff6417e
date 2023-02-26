@@ -1,0 +1,37 @@
+package com.mytel.plan.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.mytel.plan.dto.PlanDTO;
+import com.mytel.plan.service.PlanService;
+import com.mytel.plan.service.impl.PlanServiceImpl;
+
+@RestController
+public class PlanController {
+
+
+	@Autowired
+	PlanServiceImpl planService;
+
+	// Fetches all plan details
+	@CrossOrigin(origins = "http://localhost:4200")
+	@RequestMapping(value = "/plans", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	public List<PlanDTO> getAllPlans() {
+		return planService.getAllPlans();
+	}
+
+	// Fetch plan details of a specific plan
+	@RequestMapping(value = "/plans/{planId}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	public PlanDTO getSpecificPlans(@PathVariable Integer planId) {
+		return planService.getSpecificPlan(planId);
+	}
+
+}

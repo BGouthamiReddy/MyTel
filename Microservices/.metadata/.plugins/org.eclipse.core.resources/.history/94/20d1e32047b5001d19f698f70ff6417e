@@ -1,0 +1,22 @@
+package com.mytel.plan.service.impl;
+
+import java.util.List;
+
+import com.mytel.plan.dto.PlanDTO;
+import com.mytel.plan.service.PlanService;
+
+public class PlanServiceImpl implements PlanService {
+
+	@Override
+	public List<PlanDTO> getAllPlans() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public PlanDTO getSpecificPlan(int planId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

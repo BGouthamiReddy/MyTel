@@ -1,0 +1,5 @@
+package com.mytel.calldeatils.repository;
+
+public interface CallDetailsRepo {
+
+}
